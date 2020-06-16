@@ -38,3 +38,15 @@ Route::group(['middleware' => ['verify-user']], function() {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'post'], function() {
+	Route::get('/', 'PostController@index')->name('post.index');
+	Route::get('/new', 'PostController@new')->name('post.new');
+	Route::post('/store', 'PostController@store')->name('post.store');
+	Route::get('/{id}', 'PostController@show')->name('post.show');
+	
+	Route::post('/{id}/comment', 'PostController@newComment')
+			->name('post.comment.store')
+			->middleware('auth');
+
+});

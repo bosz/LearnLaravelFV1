@@ -88,6 +88,7 @@
                     <a href="{{ route('about-us') }}">About page</a>
                     <a href="/about-us">About simple</a>
                     <a href="/contact-us">Contact Us</a>
+                    <a href="{{ route('post.index') }}">My posts</a>
                 </div>
             </div>
         </div>
