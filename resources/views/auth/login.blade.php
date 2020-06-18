@@ -39,6 +39,8 @@
                             </div>
                         </div>
 
+                        <a href="{{ route('login.twitter') }}" class="btn btn-primary">Login with twitter</a>
+
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
